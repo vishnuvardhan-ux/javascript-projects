@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini calander</title>
+    <link rel="stylesheet" href="minicalander.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="calander">
+            <div class="left">
+                <p id="date">01</p>
+                <p id="day">sunday</p>
+            </div>
+            <div class="right">
+                <p id="month">january</p>
+                <p id="year">2025</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const date = document.getElementById("date");
+        const day = document.getElementById("day");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+
+        const today = new Date();
+
+        const weekdays = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+        const months = ["january","febrauary","march","april","may","june","july","august","september","october","november","december"];
+
+        console.log(today);
+
+        date.innerHTML = (today.getDate()<10?"0":"")+ today.getDate();
+        day.innerHTML = weekdays[today.getDay()];
+        month.innerHTML = months[today.getMonth()];
+        year.innerHTML = today.getyear();
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
